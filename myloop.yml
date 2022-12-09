@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  -  name: install multipacakage
+     apt:
+      name: "{{item}}"
+      state: present
+     loop:
+      - git:
+      - tree:
+      - wget:
