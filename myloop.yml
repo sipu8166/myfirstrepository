@@ -2,11 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-  -  name: install multipacakage
-     apt:
+  - name: install multi pacakage
+    apt:
       name: "{{item}}"
       state: present
-     loop:
-      - git:
-      - tree:
-      - wget:
+    loop:
+      - git
+      - tree
+      - wget
